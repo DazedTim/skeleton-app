@@ -4,6 +4,11 @@
   "authors": [
     "Kevin Ruscoe <kevdotbadger@gmail.com>"
   ],
+	"dependencies": {
+		"jquery": "2.*",
+		"bourbon": "4.*",
+		"neat": "1.7.*"
+	},
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -12,5 +17,6 @@
     "test",
     "tests",
 		"vendor"
-  ]
+  ],
+	"private": true
 }
