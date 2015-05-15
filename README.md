@@ -17,7 +17,7 @@ PROTIP: The latest version of gulp-sass seems broke, use `1.3.1` instead if you'
 
 ### Composer
 
-No really required, but there's a couple of common libs.
+Not really required, but there's a couple of common libs I use.
 
 ## IE8
 
