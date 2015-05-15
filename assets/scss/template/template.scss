@@ -1,0 +1,59 @@
+@import "flat-colours";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+$base-font-size: 16px;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  @include outer-container;
+}
+
+.hello-world {
+	margin-top: 175px;
+	line-height: 1.4em;
+	
+	@include span-columns(6);
+	@include pad(default);
+	@include shift(3);
+	
+	h1 {
+		font-size: $base-font-size * 1.8;
+		font-weight: 300;
+		margin: 0 0 15px;
+	}
+	
+	p {
+		line-height: 1.8em;
+    text-align: justify;
+    text-justify: inter-word;
+	}
+}
+
+.card {
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+	color: darken(white, 20%);
+	
+	a {
+		color: darken(white, 17.5%);
+		border-bottom: 2px solid;
+		text-decoration: none;
+	}
+}
+
+.card__top-border {
+	border-top: 5px solid;
+}
+
+.card__orange {
+	border-top-color: $flat-orange;
+	
+	a {
+		border-bottom-color: tint($flat-orange, 80%);
+		&:hover {
+			border-bottom-color: $flat-orange;
+		}
+	}
+}
