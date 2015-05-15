@@ -1,0 +1,16 @@
+{
+  "name": "Skeleton App",
+  "version": "0.0.1",
+  "authors": [
+    "Kevin Ruscoe <kevdotbadger@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+		"vendor"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+	"private": true,
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-watch": "*",
+		"gulp-sass": "*",
+		"gulp-concat": "*",
+		"gulp-uglify": "*",
+		"gulp-minify-css": "*",
+		"gulp-sourcemaps": "*"
+	}
+}
