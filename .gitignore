@@ -1,8 +1,8 @@
 bower_components
 node_modules
 vendor
-assets/css/*
-assets/js/map
-assets/js/*
+public/assets/css/*
+public/assets/js/map
+public/assets/js/*
 .sass-cache
 composer.lock
