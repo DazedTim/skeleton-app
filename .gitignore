@@ -3,6 +3,6 @@ node_modules
 vendor
 assets/css/*
 assets/js/map
-assets/js/app.min.js
+assets/js/*
 .sass-cache
 composer.lock
