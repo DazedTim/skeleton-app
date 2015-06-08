@@ -1,4 +1,7 @@
 {
+	"config": {
+		"vendor-dir": "public/inc/vendor"
+	},
 	"require": {
 		"swiftmailer/swiftmailer": "@stable",
 		"respect/validation": "@stable"

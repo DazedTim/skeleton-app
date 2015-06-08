@@ -13,7 +13,7 @@ There's a few tasks setup to merge/compress JS and CSS. Simply add another direc
 
 Simply run `gulp` to compile, or `gulp watch` to monitor files and recompile on the fly.
 
-PROTIP: The latest version of gulp-sass seems broke, use `1.3.1` instead if you're having issues.
+PROTIP: The latest version of gulp-sass seems broken with certain setups, use `1.3.3` instead if you're having issues.
 
 ### Composer
 

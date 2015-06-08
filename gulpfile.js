@@ -11,7 +11,7 @@ var js_rules = {
 		'bower_components/jquery/dist/jquery.js', 
 		'assets/js/app.js'
 	],
-	in: 'assets/js',
+	in: 'public/assets/js',
 	as: 'app.min.js',
 	watch: 'assets/js/app.js',
 	sourcemap: 'map'
@@ -21,7 +21,7 @@ var sass_rules = {
 	merge: [
 		'assets/scss/app.scss'
 	],
-	in: 'assets/css',
+	in: 'public/assets/css',
 	as: 'app.css',
 	watch: 'assets/scss/*.scss',
 	sourcemap: 'map'
