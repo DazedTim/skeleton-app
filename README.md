@@ -1,13 +1,24 @@
-# Bootstrap 3
+# Skeleton
 
 ### Setup
 
-Simply clone this repo, and run
+#### 1
+
+Clone this repo
+
+#### 2
+
+Pick you flavour (bootstrap or bourbon)
+
+##### 2.1
+
+rename *-gulp.js to gulp.js, *-bower.json to bower.json
+
+#### 3
 
     bower install
     npm install
 
-to get started
 
 ### Gulp
 
@@ -25,4 +36,4 @@ Not really required, but there's a couple of common libs I use.
 
 #### IE8
 
-If you need IE8 support, simply add `"selectizr": "1.0.2"` to the dependencies{} list, and include it in your pages.
+If you ***really*** need IE8 support, simply add `"selectizr": "1.0.2"` to the dependencies{} list, and include it in your pages.
