@@ -4,7 +4,7 @@
 
 1. Clone this repo
 2. Pick you flavour (bootstrap or bourbon)
-  * rename *-gulp.js to gulp.js, *-bower.json to bower.json
+  * rename `*-gulp.js` to `gulp.js`, `*-bower.json` to `bower.json`
 3. Run `bower install` and `npm install`
 
 ### Gulp Tasks
