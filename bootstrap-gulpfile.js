@@ -27,6 +27,11 @@ var sass_rules = {
 	sourcemap: 'map'
 };
 
+var copy_rules = {
+	from: './bower_components/bootstrap-sass-official/assets/fonts/**/*',
+	to: 'public/assets/fonts'
+}
+
 gulp.task('sass', function () {
 	gulp.src(sass_rules.merge) // Get 'assets/scss/app.scss'
 	.pipe(sass()) // SASS compile
@@ -45,6 +50,11 @@ gulp.task('js', function () {
 	.pipe(sourcemaps.write(js_rules.sourcemap))
 	.pipe(gulp.dest(js_rules.in)) // in 'assets/js/'
 });
+
+gulp.task('bootstrap-fonts', function() {
+  gulp.src(copy_rules.from)
+	.pipe(gulp.dest(copy_rules.to));
+})
 
 gulp.task('watch', function () {
 	gulp.watch(sass_rules.watch, ['sass']);
