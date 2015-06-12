@@ -2,25 +2,12 @@
 
 ### Setup
 
-#### 1
+1. Clone this repo
+2. Pick you flavour (bootstrap or bourbon)
+--* rename *-gulp.js to gulp.js, *-bower.json to bower.json
+3. Run `bower install` and `npm install`
 
-Clone this repo
-
-#### 2
-
-Pick you flavour (bootstrap or bourbon)
-
-##### 2.1
-
-rename *-gulp.js to gulp.js, *-bower.json to bower.json
-
-#### 3
-
-    bower install
-    npm install
-
-
-### Gulp
+### Gulp Tasks
 
 There's a few tasks setup to merge/compress JS and CSS. Simply add another directory to the js.merge[] array. SASS should really be merged using includes.
 
