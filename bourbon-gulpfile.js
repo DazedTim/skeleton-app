@@ -29,7 +29,7 @@ var sass_rules = {
 
 gulp.task('sass', function () {
 	gulp.src(sass_rules.merge) // Get 'assets/scss/app.scss'
-	.pipe(sass()) // SASS compile
+	.pipe(sass({errLogToConsole: true}))) // SASS compile
 	.pipe(concat(sass_rules.as)) // as app.css
 	.pipe(minifyCSS())
 	.pipe(sourcemaps.init())
