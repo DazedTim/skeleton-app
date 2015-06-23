@@ -9,6 +9,7 @@ sourcemaps = require('gulp-sourcemaps');
 var js_rules = {
 	merge: [
 		'bower_components/jquery/dist/jquery.js', 
+		'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
 		'assets/js/app.js'
 	],
 	in: 'public/assets/js',
@@ -51,7 +52,7 @@ gulp.task('js', function () {
 	.pipe(gulp.dest(js_rules.in)) // in 'assets/js/'
 });
 
-gulp.task('bootstrap-fonts', function() {
+gulp.task('install-bootstrap', function() {
   gulp.src(copy_rules.from)
 	.pipe(gulp.dest(copy_rules.to));
 })

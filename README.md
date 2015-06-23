@@ -5,7 +5,7 @@
 1. Clone this repo
 2. Pick you flavour (bootstrap or bourbon)
   * rename `*-gulp.js` to `gulp.js`, `*-bower.json` to `bower.json`
-	* If you're using bootstrap, you need to run the gulp task named `bootstrap-fonts` to move the fonts to the public dir, use `gulp bootstrap-fonts` after installing bower
+	* If you're using bootstrap, you need to run the gulp task named `install-bootstrap` to move the fonts to the public dir, use `gulp install-bootstrap` after installing bower
 3. Run `bower install` and `npm install`
 
 ### Gulp Tasks
