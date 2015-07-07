@@ -4,7 +4,8 @@ sass   = require('gulp-sass'),
 concat = require('gulp-concat'),
 uglify = require('gulp-uglify'),
 minifyCSS = require('gulp-minify-css'),
-sourcemaps = require('gulp-sourcemaps');
+sourcemaps = require('gulp-sourcemaps'),
+browserSync = require('browser-sync').create();
 
 var js_rules = {
 	merge: [
@@ -14,7 +15,9 @@ var js_rules = {
 	],
 	in: 'public/assets/js',
 	as: 'app.min.js',
-	watch: 'assets/js/app.js',
+	watch: [
+		'assets/js/app.js'
+	],
 	sourcemap: 'map'
 };
 
@@ -24,8 +27,19 @@ var sass_rules = {
 	],
 	in: 'public/assets/css',
 	as: 'app.css',
-	watch: 'assets/scss/*.scss',
+	watch: [
+		'assets/scss/*.scss'
+	],
 	sourcemap: 'map'
+};
+
+var live_reload = {
+	what: "http://192.168.33.10/my-folder",
+	when: [
+		"public/*.html",
+		js_rules.in + "/*",
+		sass_rules.in + "/*",		
+	]
 };
 
 var copy_rules = {
@@ -58,8 +72,17 @@ gulp.task('install-bootstrap', function() {
 })
 
 gulp.task('watch', function () {
-	gulp.watch(sass_rules.watch, ['sass']);
-	gulp.watch(js_rules.watch, ['js']);
+	gulp.watch( sass_rules.watch, ['sass']);
+	gulp.watch( js_rules.watch, ['js']);
+	
+	gulp.start('start-browser-sync-server');
+  gulp.watch( live_reload.when ).on('change', browserSync.reload );
+});
+
+gulp.task('start-browser-sync-server', function () {
+	browserSync.init({
+		proxy: live_reload.what
+	});
 });
 
 gulp.task('default', ['sass', 'js']);
