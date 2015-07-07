@@ -5,8 +5,16 @@
     "Kevin Ruscoe <kevdotbadger@gmail.com>"
   ],
 	"dependencies": {
+		
+	},
+	"_bootstrap_dependencies": {
 		"jquery": "2.*",
-		"bootstrap-sass-official": "*"
+		"bootstrap-sass-official": "*",
+	},
+	"_bouron_dependencies": {
+		"jquery": "2.*",
+		"bourbon": "4.*",
+		"neat": "1.7.*"
 	},
   "license": "MIT",
   "ignore": [

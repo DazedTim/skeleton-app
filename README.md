@@ -3,25 +3,19 @@
 ### Setup
 
 1. Clone this repo
-2. Pick you flavour (bootstrap or bourbon)
-  * rename `*-gulp.js` to `gulp.js`, `*-bower.json` to `bower.json`
-	* If you're using bootstrap, you need to run the gulp task named `install-bootstrap` to move the fonts to the public dir, use `gulp install-bootstrap` after installing bower
-3. Run `bower install` and `npm install`
+2. Edit the bower.json
+  * For bootstrap move `_bootstrap_dependencies` to `dependencies`
+  * For bourbon move `_bourbon_dependencies` to `dependencies`
+3. run `nmp install` to install gulp and it's tools
+4. run `bower install` to download the required libs
+5. edit gulpfile.js
+  * change `server_path` for live reloading
+	* add your javascript files to `javascripts.merge[]`
+	* If you're using bootstrap and/or font-awesome run `gulp copy-required-files` to move fonts across
+6. make changes to `public/` 
 
-### Gulp Tasks
+### Notes
 
-There's a few tasks setup to merge/compress JS and CSS. Simply add another directory to the js.merge[] array. SASS should really be merged using includes.
-
-Simply run `gulp` to compile, or `gulp watch` to monitor files and recompile on the fly.
-
-PROTIP: The latest version of gulp-sass seems broken with certain setups, use `1.3.3` instead if you're having issues.
-
-### Other Tools
-
-#### Composer
-
-Not really required, but there's a couple of common libs I use.
-
-#### IE8
-
-If you ***really*** need IE8 support, simply add `"selectizr": "1.0.2"` to the dependencies{} list, and include it in your pages.
+1. All raw files are in `assets/`, including a entrypoint app.scss and app.js
+3. The latest version of gulp-sass seems broken with certain setups, use `1.3.3` instead if you're having issues.
+4. If you ***really*** need IE8 support, simply add `"selectizr": "1.0.2"` to `dependencies` in bower.json , and include it in your pages.
