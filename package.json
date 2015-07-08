@@ -10,6 +10,7 @@
 		"gulp-sourcemaps": "*",
 		"browser-sync": "*",
 		"gulp-imagemin": "*",
-		"imagemin-pngquant": "*"
+		"imagemin-pngquant": "*",
+		"gulp-rimraf": "*"
 	}
 }

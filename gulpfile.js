@@ -7,6 +7,7 @@ minifyCSS = require('gulp-minify-css'),
 sourcemaps = require('gulp-sourcemaps'),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
+rimraf = require('gulp-rimraf'),
 browserSync = require('browser-sync').create();
 
 var settings = {
@@ -52,12 +53,10 @@ var scss = {
 	]
 }
 
-// TODO: dont listen for img/* changes
 var reloader = {
 	what: settings.server_path,
 	when: [
-		"!public/img/*",
-		"public/**/*"
+		"public/**/*.{css,js,html,php}"
 	]
 }
 
@@ -94,8 +93,10 @@ gulp.task('javascript', function () {
 		.pipe(gulp.dest(settings.root_paths.output + javascript.root_paths.output ))
 });
 
-// TODO: clear output folder before compression
 gulp.task('images', function () {
+	gulp.src(settings.root_paths.output + images.root_paths.input )
+		.pipe(rimraf({ force: true }));
+	
 	return gulp.src(settings.root_paths.input + images.root_paths.input + images.watch)
 		.pipe(imagemin({
 			progressive: true,
@@ -104,7 +105,6 @@ gulp.task('images', function () {
 		}))
 		.pipe(gulp.dest(settings.root_paths.output + images.root_paths.output ));
 });
-
 
 gulp.task('watch', function () {
 	
@@ -116,7 +116,6 @@ gulp.task('watch', function () {
 	gulp.watch( reloader.when ).on('change', browserSync.reload );
 	
 });
-
 
 // Misc
 gulp.task('copy-required-files', function() {
