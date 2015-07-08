@@ -44,8 +44,7 @@ var scss = {
 var reloader = {
 	what: settings.server_path,
 	when: [
-		"public/*",
-		"public/**/*",
+		"public/**/*"
 	]
 }
 
