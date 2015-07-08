@@ -63,9 +63,9 @@ var copy = {
 
 // Core 
 gulp.task('sass', function () {
-	gulp.src(settings.base_input + scss.root_paths.input + scss.root_paths.as + ".scss")
+	gulp.src(settings.base_input + scss.root_paths.input + scss.as + ".scss")
 	.pipe(sass({errLogToConsole: true}))
-	.pipe(concat(scss.as))
+	.pipe(concat(scss.as + ".css"))
 	.pipe(minifyCSS())
 	.pipe(sourcemaps.init())
 	.pipe(sourcemaps.write("map"))

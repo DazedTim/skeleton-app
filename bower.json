@@ -9,7 +9,7 @@
 	},
 	"_bootstrap_dependencies": {
 		"jquery": "2.*",
-		"bootstrap-sass-official": "*",
+		"bootstrap-sass-official": "*"
 	},
 	"_bouron_dependencies": {
 		"jquery": "2.*",
