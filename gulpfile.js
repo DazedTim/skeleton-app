@@ -23,7 +23,7 @@ var javascript = {
 		"assets/js/**/*.js",
 		"assets/js/app.js"
 	],
-	as: "app.min.js",
+	as: "app",
 	watch: [
 		"**/*.js"
 	]
@@ -34,7 +34,7 @@ var scss = {
 		input: "scss/",
 		output: "css/"
 	},
-	as: "app.css",
+	as: "app",
 	watch: [
 		"**/*.scss"
 	]
@@ -44,9 +44,7 @@ var scss = {
 var reloader = {
 	what: settings.server_path,
 	when: [
-		"public/*.html",
-		javascript.as,
-		scss.as		
+		"public/*",
 	]
 }
 
@@ -65,7 +63,7 @@ var copy = {
 
 // Core 
 gulp.task('sass', function () {
-	gulp.src(settings.base_input + scss.root_paths.input + "app.scss")
+	gulp.src(settings.base_input + scss.root_paths.input + scss.root_paths.as + ".scss")
 	.pipe(sass({errLogToConsole: true}))
 	.pipe(concat(scss.as))
 	.pipe(minifyCSS())
@@ -76,7 +74,7 @@ gulp.task('sass', function () {
 
 gulp.task('javascript', function () {
 	gulp.src(javascript.merge)
-	.pipe(concat(javascript.as))
+	.pipe(concat(javascript.as + ".min.js"))
 	.pipe(uglify())
 	.pipe(sourcemaps.init())
 	.pipe(sourcemaps.write("map"))
