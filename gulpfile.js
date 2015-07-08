@@ -20,6 +20,7 @@ var javascript = {
 	},
 	merge: [
 		'bower_components/jquery/dist/jquery.js',
+		"assets/js/**/*.js",
 		"assets/js/app.js"
 	],
 	as: "app.min.js",
