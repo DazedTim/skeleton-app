@@ -45,6 +45,7 @@ var reloader = {
 	what: settings.server_path,
 	when: [
 		"public/*",
+		"public/**/*",
 	]
 }
 
@@ -87,7 +88,7 @@ gulp.task('watch', function () {
 	gulp.watch( settings.base_input + scss.root_paths.input + scss.watch, ['sass']);
 	gulp.watch( settings.base_input + javascript.root_paths.input + javascript.watch, ['javascript']);
 	
-	gulp.start('start-browser-sync-server');
+	gulp.start(['start-browser-sync-server', 'default']);
 	gulp.watch( reloader.when ).on('change', browserSync.reload );
 	
 });
@@ -106,4 +107,4 @@ gulp.task('start-browser-sync-server', function () {
 	});
 });
 
-gulp.task('default', ['sass', 'js']);
+gulp.task('default', ['sass', 'javascript']);
