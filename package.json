@@ -8,6 +8,8 @@
 		"gulp-uglify": "*",
 		"gulp-minify-css": "*",
 		"gulp-sourcemaps": "*",
-		"browser-sync": "*"
+		"browser-sync": "*",
+		"gulp-imagemin": "*",
+		"imagemin-pngquant": "*"
 	}
 }
