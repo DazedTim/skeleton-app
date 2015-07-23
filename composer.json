@@ -4,6 +4,6 @@
 	},
 	"require": {
 		"swiftmailer/swiftmailer": "@stable",
-		"respect/validation": "@stable"
+		"kevdotbadger/validator": "0.15"
 	}
 }
