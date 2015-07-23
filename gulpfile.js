@@ -7,7 +7,7 @@ minifyCSS = require('gulp-minify-css'),
 sourcemaps = require('gulp-sourcemaps'),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
-rimraf = require('gulp-rimraf'),
+del = require('del'),
 browserSync = require('browser-sync').create();
 
 var settings = {
@@ -32,7 +32,7 @@ var javascript = {
 		output: "js/"
 	},
 	merge: [
-		'bower_components/jquery/dist/jquery.js',
+		'node_modules/jquery/jquery.js',
 		settings.root_paths.input + "js/**/*.js",
 		settings.root_paths.input + "js/app.js"
 	],
@@ -63,11 +63,11 @@ var reloader = {
 var copy = {
 	paths: [
 		{
-			from: './bower_components/bootstrap-sass-official/assets/fonts/**/*',
+			from: './node_modules/bootstrap-sass/assets/fonts/**/*',
 			to: settings.root_paths.output + 'fonts'
 		},
 		{
-			from: './bower_components/fontawesome/fonts/**',
+			from: './node_modules/font-awesome/fonts/**',
 			to: settings.root_paths.output + 'fonts/fontawesome'
 		},
 	]
@@ -94,8 +94,7 @@ gulp.task('javascript', function () {
 });
 
 gulp.task('images', function () {
-	gulp.src(settings.root_paths.output + images.root_paths.input )
-		.pipe(rimraf({ force: true }));
+	del(settings.root_paths.output + images.root_paths.input );
 	
 	return gulp.src(settings.root_paths.input + images.root_paths.input + images.watch)
 		.pipe(imagemin({

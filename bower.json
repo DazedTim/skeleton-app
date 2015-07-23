@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "authors": [
     "Kevin Ruscoe <kevdotbadger@gmail.com>"
-  ],
+	],
 	"dependencies": {
-		
-	},
-	"_bootstrap_dependencies": {
 		"jquery": "2.*",
 		"bootstrap-sass-official": "*"
 	},

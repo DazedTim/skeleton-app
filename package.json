@@ -11,6 +11,9 @@
 		"browser-sync": "*",
 		"gulp-imagemin": "*",
 		"imagemin-pngquant": "*",
-		"gulp-rimraf": "*"
+		"del": "*",
+		"bootstrap-sass": "3.3.*",
+		"jquery": "1.9.*",
+		"font-awesome": "*"
 	}
 }
