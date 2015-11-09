@@ -7,9 +7,8 @@
 3. edit gulpfile.js
   * change `server_path` for live reloading
   * add your javascript files to `javascripts.merge[]`
-4. run `bower install` to download the required libs
-5. If you're using bootstrap and/or font-awesome, run `gulp copy-required-files` to move fonts across
-6. make changes to `public/` 
+4. If you're using bootstrap and/or font-awesome, run `gulp copy-required-files` to move fonts across
+5. make changes to `public/` 
 
 ### Notes
 

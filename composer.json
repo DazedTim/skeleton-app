@@ -4,6 +4,9 @@
 	},
 	"require": {
 		"swiftmailer/swiftmailer": "@stable",
-		"kevdotbadger/validator": "0.15"
+		"kevdotbadger/validator": "0.15",
+		"kevdotbadger/input": "*",
+		"kevdotbadger/templater": "*",
+		"kevdotbadger/stupidmailer": "*",
 	}
 }

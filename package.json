@@ -14,6 +14,7 @@
 		"del": "*",
 		"bootstrap-sass": "3.3.*",
 		"jquery": "1.9.*",
-		"font-awesome": "*"
+		"font-awesome": "*",
+	    "gulp-autoprefixer": "*"
 	}
 }

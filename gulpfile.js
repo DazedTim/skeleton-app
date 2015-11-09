@@ -8,6 +8,7 @@ sourcemaps = require('gulp-sourcemaps'),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
 del = require('del'),
+autoprefixer = require('gulp-autoprefixer'),
 browserSync = require('browser-sync').create();
 
 var settings = {
@@ -78,6 +79,10 @@ gulp.task('sass', function () {
 	return gulp.src(settings.root_paths.input + scss.root_paths.input + scss.as + ".scss")
 		.pipe(sass({errLogToConsole: true}))
 		.pipe(concat(scss.as + ".css"))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(minifyCSS())
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write("map"))
