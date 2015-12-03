@@ -2,17 +2,19 @@
 
 // WordPress shortcut functions
 
-  // Echo assets path
-	function the_assets_path($path = '') {
-		echo get_assets_path($path);
+function the_assets_path( $file = false ){
+	echo get_assets_path($file);
+}
+
+function get_assets_path( $file = false){
+	$path = get_template_directory_uri() . "/assets/";
+	
+	if( $file ){
+		$path .= $file;
 	}
-  
-  // Get assets path
-	function get_assets_path($path = '') {
-		$template_path = get_template_directory_uri() . '/assets/';
-		$template_path .= $path;
-		return $this;
-	}
+	
+	return $path;
+}
 
 
 ?>
